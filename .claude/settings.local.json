@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(nest --version)",
+      "Bash(psql --version)",
+      "Bash(pg_isready)",
+      "Bash(psql -lqt)",
+      "Bash(sudo -n -u postgres psql -c \"SELECT current_user;\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:3000/api/auth/me -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(pkill -f \"node dist/main\")",
+      "Bash(npx tsc *)",
+      "Bash(echo \"=== tsc exit: $? ===\")",
+      "Bash(./node_modules/.bin/nest build *)",
+      "Bash(echo \"=== nest build exit: $? ===\")",
+      "Bash(pkill -f \"vite\")",
+      "Bash(grep -vE '^\\\\.$|^\\\\.\\\\.$')",
+      "Bash(pkill -f \"node_modules/.bin/vite\")",
+      "Bash(pkill -f \"esbuild\")",
+      "Bash(curl -s -o /dev/null -w \"auth/me -> %{http_code}\\\\n\" http://localhost:3000/api/auth/me)",
+      "Read(//home/dev/.claude/projects/-home-dev-Projects-hospital-management/**)"
+    ]
+  }
+}
